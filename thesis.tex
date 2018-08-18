@@ -1,0 +1,59 @@
+\documentclass{UUTex}
+
+% begin the document...
+\begin {document}
+	
+	\fontsize{13pt}{13pt}\selectfont
+
+	% alphabetic page numbering for non-report pages...
+	\pagenumbering {alph}
+
+	% the besmele  page...
+	\include {TeX/fa/besmele}
+	
+	% the cover page...
+	\include {TeX/fa/cover}
+	
+	% submission page...
+	\include {TeX/fa/submission}
+	
+	% evaluation page...
+	\include {TeX/fa/donation}
+	
+	% acknowledgements page...
+	\include {TeX/fa/thanking}
+	
+	% the abstract page...
+	\linespread {1}
+	\include {TeX/fa/abstract}
+
+	% table of content...
+	\linespread {1.5}
+	\tableofcontents 
+	\newpage
+	\listoftables
+	\newpage
+	\listoffigures
+	\newpage
+	
+	% begin the arabic page numbering from now on...
+	\pagenumbering {arabic}
+	
+	% the report body...
+	\include {TeX/body/1-introduction}
+	\include {TeX/body/2-related_works}
+	\include {TeX/body/3-proposed_method}
+	\include {TeX/body/4-evaluation}
+	\include {TeX/body/5-conclusion}
+	\include {TeX/body/6-references}
+	
+	% appendixes section...
+	\begin {latin}
+		% english abstract page...
+		\include {TeX/en/abstract}
+		
+		% english cover page...
+		\include {TeX/en/cover}
+	\end {latin}
+
+\end {document}
