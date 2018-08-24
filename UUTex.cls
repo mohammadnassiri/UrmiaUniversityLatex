@@ -74,7 +74,6 @@ openright % chapters start on odd pages
 
 % add references in table of contents...
 
-
 % pushes the footnote to the bottom of the page...
 \usepackage [bottom] {footmisc}
 
@@ -91,11 +90,11 @@ openright % chapters start on odd pages
 \renewcommand{\cftsubsubsecaftersnum}{-}
 \renewcommand{\cftfigaftersnum}{ - }
 \renewcommand{\cfttabaftersnum}{ - }
-\setlength{\cftsecnumwidth}{1.7em}
-\setlength{\cftsubsecnumwidth}{2.7em}
-\setlength{\cftsubsubsecnumwidth}{3.5em}
-\setlength{\cftfignumwidth}{2em}
-\setlength{\cfttabnumwidth}{2em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.5em}
+\setlength{\cftsubsubsecnumwidth}{4em}
+\setlength{\cftfignumwidth}{3em}
+\setlength{\cfttabnumwidth}{3em}
 % add - after section numbering and remove the space
 \usepackage{titlesec}
 \titlelabel{\thetitle-}
@@ -108,6 +107,7 @@ openright % chapters start on odd pages
 \setcounter{secnumdepth}{4}
 %caption fonts
 \usepackage[font={small,bf}]{caption}
+\captionsetup{labelfont=bf}
 
 %end of customize
 
@@ -202,3 +202,22 @@ openright % chapters start on odd pages
 
 % define line height...
 \linespread {1.5}
+
+% restart footnote in each page
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+% Remove counter "footnote" from the reset counter list
+% of counter "chapter".
+\usepackage{remreset}
+\makeatletter
+\@removefromreset{footnote}{chapter}
+\makeatother
+
+% customize caption style
+\captionsetup[figure]{labelformat=parens}
+ 
+ % customize cite style
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@citex}{,\penalty\@m\ }{و}{}{}
+\makeatother
