@@ -221,3 +221,6 @@ openright % chapters start on odd pages
 \makeatletter
 \patchcmd{\@citex}{,\penalty\@m\ }{و}{}{}
 \makeatother
+
+% PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES
+\usepackage{notoccite}
