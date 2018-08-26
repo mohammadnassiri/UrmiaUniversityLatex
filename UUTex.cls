@@ -111,8 +111,26 @@ openright % chapters start on odd pages
 
 %end of customize
 
+% For writing algorithm and code blocks
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\lstset{
+	basicstyle=\small,
+	numberstyle=\small, 
+	breaklines=true,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{blue},
+	stringstyle=\color{orange},
+	frame=Trbl,
+	numbers=left,
+	stepnumber=1,
+	tabsize=2,
+}
+
 % import the xepersian package...
-\usepackage {xepersian}
+\usepackage[Kashida]{xepersian}
 
 % custom styles
 \SepMark{-}
@@ -224,3 +242,7 @@ openright % chapters start on odd pages
 
 % PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES
 \usepackage{notoccite}
+
+% customize lstlisting caption title
+\renewcommand\lstlistingname{Code}
+\renewcommand\lstlistlistingname{Code}
