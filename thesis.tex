@@ -1,5 +1,10 @@
 \documentclass{UUTex}
 
+% glossary
+\glstoctrue
+\makeglossaries
+\include{TeX/glossary}
+
 % begin the document...
 \begin {document}
 	
@@ -44,6 +49,11 @@
 	\include {TeX/body/4-evaluation}
 	\include {TeX/body/5-conclusion}
 	\include {TeX/body/6-references}
+	
+	% the glossary
+	\include{Tex/en/dicen2fa}
+	\include{Tex/fa/dicfa2en}
+	\printglossaries
 	
 	% appendixes section...
 	\begin {latin}

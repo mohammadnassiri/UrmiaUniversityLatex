@@ -77,6 +77,12 @@ openright % chapters start on odd pages
 % pushes the footnote to the bottom of the page...
 \usepackage [bottom] {footmisc}
 
+% glossary
+\usepackage {glossaries}
+\renewcommand*{\glossaryname}{واژه نامه}
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+
 % customize
 
 % add dot for chpaters in toc
