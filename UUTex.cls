@@ -80,6 +80,8 @@ openright % chapters start on odd pages
 % glossary
 \usepackage {glossaries}
 \renewcommand*{\glossaryname}{واژه نامه}
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
 
 % customize
 
