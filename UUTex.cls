@@ -244,5 +244,14 @@ openright % chapters start on odd pages
 \usepackage{notoccite}
 
 % customize lstlisting caption title
-\renewcommand\lstlistingname{Code}
-\renewcommand\lstlistlistingname{Code}
+\renewcommand\lstlistingname{کد}
+\renewcommand\lstlistlistingname{کد}
+\captionsetup[lstlisting]{labelformat=parens}
+
+% define a no break page environment for captionof
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+	\vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+	\prevdepth=\tpd}
+
